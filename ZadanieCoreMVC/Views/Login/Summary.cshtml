@@ -1,0 +1,22 @@
+﻿@model ZadanieCoreMVC.Models.UserViewModel
+@using ZadanieCoreMVC.App_GlobalResources
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.LabelFor(m => m.NickName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NickName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.LabelFor(m => m.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">@GlobalResource.Back</a>
+</div>

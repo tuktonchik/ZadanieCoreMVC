@@ -1,0 +1,23 @@
+﻿@model ZadanieCoreMVC.Models.UserViewModel
+@using ZadanieCoreMVC.App_GlobalResources
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.NickName)
+                @Html.TextBoxFor(m => m.NickName)
+                @Html.ValidationMessageFor(m => m.NickName, string.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email, string.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <input type="submit" value="@GlobalResource.Save" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
